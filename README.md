@@ -1,12 +1,14 @@
 # 1、项目介绍
 ## 1.1、本次分享介绍    
-**(第一期)[2025.2.26]LangGraph基础功能测试**                 
-主要内容:LangGraph介绍，测试基础demo用例、记忆功能、工具集成、human-in-the-loop等功能                         
+**(第一期)[2025.2.27]带有记忆功能的流量包推荐智能客服web端用例**                 
+主要内容:使用LangGraph+DeepSeek-R1+FastAPI+Gradio实现一个带有记忆功能的流量包推荐智能客服web端用例,同时也支持gpt大模型、国产大模型(OneApi方式)、Ollama本地开源大模型、阿里通义千问大模型                                                                 
 
 ## 1.2 LangGraph介绍 
 LangGraph 是由 LangChain 团队开发的一个开源框架，旨在帮助开发者构建基于大型语言模型（LLM）的复杂、有状态、多主体的应用           
 它通过将工作流表示为图结构（graph），提供了更高的灵活性和控制能力，特别适合需要循环逻辑、状态管理以及多主体协作的场景            
 比如智能代理（agent）和多代理工作流            
+官方文档:https://langchain-ai.github.io/langgraph/                     
+
 ## 1.1 核心概念 
 **图结构（Graph Structure）**              
 LangGraph 将应用逻辑组织成一个有向图，其中：                    
@@ -60,14 +62,14 @@ https://youtu.be/CgZsdK43tcY
                 
 
 # 3、项目初始化
-## 3.1 下载源码
-GitHub或Gitee中下载工程文件到本地，下载地址如下：               
-https://github.com/NanGePlus/LangGraphTest                             
-https://gitee.com/NanGePlus/LangGraphTest                                 
+## 3.1 下载源码 
+GitHub或Gitee中下载工程文件到本地，下载地址如下：                
+https://github.com/NanGePlus/LangGraphChatBot                               
+https://gitee.com/NanGePlus/LangGraphChatBot                                   
 
 ## 3.2 构建项目
 使用pycharm构建一个项目，为项目配置虚拟python环境             
-项目名称：LangGraphTest                                
+项目名称：LangGraphChatBot                                
 虚拟环境名称保持与项目名称一致                
 
 ## 3.3 将相关代码拷贝到项目工程中           
@@ -77,14 +79,27 @@ https://gitee.com/NanGePlus/LangGraphTest
 命令行终端中直接运行如下命令安装依赖                  
 pip install langgraph==0.2.74                  
 pip install langchain-openai==0.3.6            
+pip install fastapi==0.115.8                         
+pip install uvicorn==0.34.0                          
+pip install gradio==5.18.0           
 
 
 # 4、项目测试
-分别在命令行终端中运行如下指令进行测试             
-cd 01_BasicDemo        
-python 01_demo.py            
-python 02_demoWithMemory.py            
-python 03_demoWithHumanInTheLoop.py            
+## 4.1 带有记忆功能的流量包推荐智能客服web端用例   
+主要内容:使用LangGraph+DeepSeek-R1+FastAPI+Gradio实现一个带有记忆功能的流量包推荐智能客服web端用例,同时也支持gpt大模型、国产大模型(OneApi方式)、Ollama本地开源大模型、阿里通义千问大模型                                                                   
+### （1）启动main脚本
+进入02_ChatBot文件夹下，在使用python main.py命令启动脚本前，需根据自己的实际情况调整代码中的如下参数                                   
+llms.py中关于大模型配置参数的调整，以及main.py脚本中的服务IP和PORT、LangSmith平台的API KEY等的设置                        
+### （2）运行webUI脚本进行测试             
+进入02_ChatBot文件夹下，再使用python webUI.py命令启动脚本前，需根据自己的实际情况调整代码中的如下参数，运行成功后，可以查看smith的跟踪情况                  
+是否要流式输出可设置stream_flag = False或True，检查URL地址中的IP和PORT是否和main脚本中相同           
+运行成功后直接打开网址，在浏览器端进行交互测试              
 
 
- 
+
+
+
+
+
+
+          
