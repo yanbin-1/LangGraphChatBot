@@ -2,7 +2,8 @@
 ## 1.1、本次分享介绍    
 **(第一期)[2025.2.27]带有记忆功能的流量包推荐智能客服web端用例**                 
 主要内容:使用LangGraph+DeepSeek-R1+FastAPI+Gradio实现一个带有记忆功能的流量包推荐智能客服web端用例,同时也支持gpt大模型、国产大模型(OneApi方式)、Ollama本地开源大模型、阿里通义千问大模型         
-https://youtu.be/meuLnVCzEM4             
+https://www.bilibili.com/video/BV1m89NYKE2J/               
+https://youtu.be/meuLnVCzEM4              
 
 ## 1.2 LangGraph介绍 
 LangGraph 是由 LangChain 团队开发的一个开源框架，旨在帮助开发者构建基于大型语言模型（LLM）的复杂、有状态、多主体的应用           
