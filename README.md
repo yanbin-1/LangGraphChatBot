@@ -1,9 +1,17 @@
 # 1、项目介绍
 ## 1.1、本次分享介绍    
 **(第一期)[2025.2.27]带有记忆功能的流量包推荐智能客服web端用例**                 
-主要内容:使用LangGraph+DeepSeek-R1+FastAPI+Gradio实现一个带有记忆功能的流量包推荐智能客服web端用例,同时也支持gpt大模型、国产大模型(OneApi方式)、Ollama本地开源大模型、阿里通义千问大模型         
-https://www.bilibili.com/video/BV1m89NYKE2J/               
-https://youtu.be/meuLnVCzEM4              
+主要内容:使用LangGraph+DeepSeek-R1+FastAPI+Gradio实现一个带有记忆功能的流量包推荐智能客服web端用例,同时也支持gpt大模型、国产大模型(OneApi方式)、Ollama本地开源大模型、阿里通义千问大模型                 https://www.bilibili.com/video/BV1m89NYKE2J/                 
+https://youtu.be/meuLnVCzEM4                 
+**(第二期)[2025.3.2]带有记忆功能的流量包推荐智能客服web端用例+短期记忆和长期记忆+对话历史管理**                   
+在第一期应用案例的基础上进行迭代短期记忆、长期记忆和对话历史管理                    
+短期记忆(short-term):大模型在本次会话中的上下文记忆，Graph线程内的持久化                                
+长期记忆(long-term):长期存储对话历史记录，Graph跨线程持久化               
+使用持久性来跟踪对话历史记录，它使继续对话变得容易。但是，随着对话时间越来越长，此对话历史记录可能会累积并占据越来越多的上下文窗口                 
+这通常是不可取的，因为它会导致对LLM调用更昂贵、更长，并且可能导致错误。为了防止这种情况发生，也需要管理对话历史记录(自定义函数修剪和过滤state中的消息)                 
+https://www.bilibili.com/video/BV1a19bYVEg4/                       
+https://youtu.be/CNmrvtCqveI                     
+
 
 ## 1.2 LangGraph介绍 
 LangGraph 是由 LangChain 团队开发的一个开源框架，旨在帮助开发者构建基于大型语言模型（LLM）的复杂、有状态、多主体的应用           
@@ -87,7 +95,7 @@ pip install gradio==5.18.0
 
 
 # 4、项目测试
-## 4.1 带有记忆功能的流量包推荐智能客服web端用例   
+## 4.1 带有记忆功能的流量包推荐智能客服web端用例1   
 主要内容:使用LangGraph+DeepSeek-R1+FastAPI+Gradio实现一个带有记忆功能的流量包推荐智能客服web端用例,同时也支持gpt大模型、国产大模型(OneApi方式)、Ollama本地开源大模型、阿里通义千问大模型                                                                   
 ### （1）启动main脚本
 进入01_ChatBot文件夹下，在使用python main.py命令启动脚本前，需根据自己的实际情况调整代码中的如下参数                                   
@@ -97,11 +105,22 @@ llms.py中关于大模型配置参数的调整，以及main.py脚本中的服务
 是否要流式输出可设置stream_flag = False或True，检查URL地址中的IP和PORT是否和main脚本中相同           
 运行成功后直接打开网址，在浏览器端进行交互测试              
 
-
-
-
-
-
-
-
+## 4.2 应用案例2:带有记忆功能的流量包推荐智能客服web端用例+短期记忆和长期记忆+对话历史管理 
+在应用案例1的基础上进行迭代短期记忆、长期记忆和对话历史管理                  
+短期记忆(short-term):大模型在本次会话中的上下文记忆，Graph线程内的持久化                              
+长期记忆(long-term):长期存储对话历史记录，Graph跨线程持久化              
+使用持久性来跟踪对话历史记录，它使继续对话变得容易。但是，随着对话时间越来越长，此对话历史记录可能会累积并占据越来越多的上下文窗口                
+这通常是不可取的，因为它会导致对LLM调用更昂贵、更长，并且可能导致错误。为了防止这种情况发生，也需要管理对话历史记录(自定义函数修剪和过滤state中的消息)            
+### （1）短期记忆、长期记忆、对话历史管理测试
+进入02_ChatBot文件夹下，在使用python demoWithMemory.py命令启动脚本前，需根据自己的实际情况调整代码中的如下参数                                   
+llms.py中关于大模型配置参数的调整            
+### （2）启动main脚本
+进入02_ChatBot文件夹下，在使用python main.py命令启动脚本前，需根据自己的实际情况调整代码中的如下参数                                   
+llms.py中关于大模型配置参数的调整，以及main.py脚本中的服务IP和PORT、LangSmith平台的API KEY等的设置                        
+### （3）运行webUI脚本进行测试             
+进入02_ChatBot文件夹下，再使用python webUI.py命令启动脚本前，需根据自己的实际情况调整代码中的如下参数，运行成功后，可以查看smith的跟踪情况                  
+是否要流式输出可设置stream_flag = False或True，检查URL地址中的IP和PORT是否和main脚本中相同           
+运行成功后直接打开网址，在浏览器端进行交互测试            
           
+
+    
