@@ -14,8 +14,9 @@ https://youtu.be/CNmrvtCqveI
 **(第三期)[2025.3.6]带有记忆功能的流量包推荐智能客服web端用例+短期记忆和长期记忆+对话历史管理+PostgreSQL持久化**                   
 在第二期应用案例的基础上进行迭代将基于内存的存储调整为PostgreSQL持久化存储                                          
 短期记忆(short-term):大模型在本次会话中的上下文记忆，Graph线程内的持久化                                     
-长期记忆(long-term):长期存储对话历史记录，Graph跨线程持久化               
-https://youtu.be/4Ok5Ad22yHw           
+长期记忆(long-term):长期存储对话历史记录，Graph跨线程持久化              
+https://www.bilibili.com/video/BV1cn9mYVENc/                 
+https://youtu.be/4Ok5Ad22yHw               
 
 
 ## 1.2 LangGraph介绍 
