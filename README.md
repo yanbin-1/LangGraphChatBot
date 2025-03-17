@@ -17,6 +17,47 @@ https://youtu.be/CNmrvtCqveI
 长期记忆(long-term):长期存储对话历史记录，Graph跨线程持久化              
 https://www.bilibili.com/video/BV1cn9mYVENc/                 
 https://youtu.be/4Ok5Ad22yHw               
+**(第四期)[2025.3.16]基于LangChain、LangGraph框架和PostgreSQL数据库，结合工具调用和动态路由实现用户意图识别和分诊工作流用例**                
+**总体流程如下所示:**             
+用户输入问题，进入agent分诊节点进行用户意图分析                  
+若需调用工具，则调用call_tools节点进行工具并行执行；否则直接回复用户问题结束                       
+工具调用后，根据工具类型进行路由：                
+检索类工具：进入grade_documents进行相关性评分，若相关则路由到generate节点，否则rewrite（最多3次）                               
+非检索类工具：直接路由到generate节点                      
+生成最终回复并输出                 
+流程如下图所示:                      
+<img src="./pictures/01.png" alt="" width="500" />                   
+**（1）核心功能：基于状态图的对话流程**         
+定义了一个包含多个节点（Node）和边（Edge）的对话工作流，节点包括：                         
+agent：分析用户问题并决定是否调用工具                    
+call_tools：并行执行工具调用                   
+grade_documents：评估检索到的文档与问题的相关性               
+rewrite：重写用户查询以改进问题                   
+generate：生成最终回复                
+动态路由：                
+route_after_tools：根据工具调用结果决定下一步是生成回复还是评分文档              
+route_after_grade：根据文档相关性评分决定生成回复还是重写查询                       
+**（2）工具调用与并行处理**                
+工具配置：通过ToolConfig类管理工具列表和路由配置，支持动态路由（检索类工具路由到grade_documents，其他路由到generate）               
+并行工具节点：ParallelToolNode使用线程池（ThreadPoolExecutor）并行执行多个工具调用，提高效率，支持最大工作线程数配置（默认5）          
+**（3）数据库与持久化存储**                
+连接池管理：使用ConnectionPool管理PostgreSQL数据库连接，支持自动提交、超时设置和连接池状态监控（monitor_connection_pool）                 
+线程内持久化：通过PostgresSaver保存对话状态检查点                 
+跨线程持久化：通过PostgresStore存储用户记忆（store_memory），支持记忆搜索和存储（如用户输入包含“记住”时保存）                  
+重试机制：数据库操作使用tenacity库实现重试（最多3次，指数退避等待），提高健壮性                    
+**（4）自然语言处理与提示模板**               
+语言模型：通过get_llm获取聊天模型（llm_chat）和嵌入模型（llm_embedding），用于处理用户输入和生成回复              
+提示模板：使用create_chain函数加载并缓存提示模板文件（如代理、重写、评分、生成模板），支持结构化输出（如DocumentRelevanceScore）          
+消息过滤：filter_messages过滤消息，仅保留AIMessage和HumanMessage，限制最多保留5条历史消息                
+**（5）日志与错误处理**           
+日志记录：使用logging模块和ConcurrentRotatingFileHandler记录详细日志（DEBUG级别），支持文件轮转（5MB，3个备份）             
+错误处理：多层次异常捕获（如数据库连接、工具调用、状态访问等），记录错误并提供默认路由或提示用户                
+**（6）用户交互与响应输出**                  
+主循环：main函数实现交互式对话，用户输入后通过graph_response处理并输出响应，支持退出命令（quit、exit、q）                 
+响应区分：区分工具输出（显示工具名称）和大模型输出（普通回复），提升用户体验                    
+**（7）辅助功能**                
+可视化：通过save_graph_visualization将状态图保存为PNG文件，便于调试             
+配置管理：通过Config类统一管理日志文件路径、数据库URI、提示模板路径等配置                           
 
 
 ## 1.2 LangGraph介绍 
@@ -161,6 +202,33 @@ llms.py中关于大模型配置参数的调整，以及main.py脚本中的服务
 进入03_ChatBotWithPostgres文件夹下，再使用python webUI.py命令启动脚本前，需根据自己的实际情况调整代码中的如下参数，运行成功后，可以查看smith的跟踪情况                  
 是否要流式输出可设置stream_flag = False或True，检查URL地址中的IP和PORT是否和main脚本中相同           
 运行成功后直接打开网址，在浏览器端进行交互测试            
+
+## 4.4 应用案例4:基于LangChain、LangGraph框架和PostgreSQL数据库，结合工具调用和动态路由实现用户意图识别和分诊工作流用例            
+在运行脚本前，打开命令行终端按照如下命令进行相关依赖安装：                            
+pip install langchain-community==0.3.19                        
+pip install langchain-chroma==0.2.2                        
+pip install pdfminer                     
+pip install pdfminer.six                         
+pip install nltk==3.9.1                      
+pip install psycopg2==2.9.10              
+pip install concurrent-log-handler==0.9.25                           
+### （1）使用Docker的方式运行PostgreSQL数据库  
+请先按照案例3中的操作流程启动相关服务                
+### （2）知识灌库 
+进入04_RagAgent文件夹下，运行vectorSaveTest.py脚本，文档加载->文档切分->向量化->灌入向量数据库            
+可以参考如下项目:                    
+https://github.com/NanGePlus/RagLangChainTest            
+### （3）demo测试
+进入04_RagAgent文件夹下，在使用python demoRagAgent.py命令启动脚本前，需根据自己的实际情况调整代码中的llms.py中关于大模型配置参数的调整                
+**注意事项:**             
+在测试使用调用oneapi(阿里通义千问)、qwen的接口时，会报错如下所示：                
+openai.BadRequestError: Error code: 400 - {'error': {'message': 'input should not be none.: payload.input.contents (request id: 2024082015351785023974771558878)', 'type': 'upstream_error', 'param': '400', 'code': 'bad_response_status_code'}}              
+经过分析后，langchain_openai/embeddings包中的base.py源码中默认如下代码的true改为false                
+check_embedding_ctx_length: bool = False                   
+源码完整路径如下所示:                  
+/opt/anaconda3/envs/RagLangchainTest/lib/python3.11/site-packages/langchain_openai/embeddings/base.py          
+修改后重新启动main服务，进行重新测试              
+
 
  
           
