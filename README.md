@@ -19,6 +19,7 @@ https://www.bilibili.com/video/BV1cn9mYVENc/
 https://youtu.be/4Ok5Ad22yHw               
 **(第四期)[2025.3.16]基于LangChain、LangGraph框架和PostgreSQL数据库，结合工具调用和动态路由实现用户意图识别和分诊工作流用例**                
 **总体流程如下所示:**             
+https://youtu.be/63wwAy99j54             
 用户输入问题，进入agent分诊节点进行用户意图分析                  
 若需调用工具，则调用call_tools节点进行工具并行执行；否则直接回复用户问题结束                       
 工具调用后，根据工具类型进行路由：                
