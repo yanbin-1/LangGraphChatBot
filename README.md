@@ -60,6 +60,8 @@ route_after_grade：根据文档相关性评分决定生成回复还是重写查
 **（7）辅助功能**                
 可视化：通过save_graph_visualization将状态图保存为PNG文件，便于调试             
 配置管理：通过Config类统一管理日志文件路径、数据库URI、提示模板路径等配置                           
+**(第五期)[2025.3.19]基于FastAPI、Gradio、LangChain、LangGraph框架实现工具调用和动态路由的分诊工作流用例并对外提供API服务**                      
+主要内容:在第四期视频的应用案例4的基础上，使用FastAPI封装API接口对外提供web服务，并使用Gradio实现一个web端页面支持新建会话、历史会话加载、用户注册和登录等                        
 
 
 ## 1.2 LangGraph介绍 
@@ -230,6 +232,14 @@ check_embedding_ctx_length: bool = False
 源码完整路径如下所示:                  
 /opt/anaconda3/envs/RagLangchainTest/lib/python3.11/site-packages/langchain_openai/embeddings/base.py          
 修改后重新启动main服务，进行重新测试              
+### （4）启动main脚本
+进入04_RagAgent文件夹下，在使用python main.py命令启动脚本前，需根据自己的实际情况调整代码中的如下参数                                   
+llms.py中关于大模型配置参数的调整，以及main.py脚本中的服务IP和PORT、LangSmith平台的API KEY等的设置                        
+### （5）运行webUI脚本进行测试             
+进入04_RagAgent文件夹下，再使用python webUI.py命令启动脚本前，需根据自己的实际情况调整代码中的如下参数，运行成功后，可以查看smith的跟踪情况                     
+是否要流式输出可设置stream_flag = False或True，检查URL地址中的IP和PORT是否和main脚本中相同            
+运行成功后直接打开网址，在浏览器端进行交互测试              
+            
 
 
  
