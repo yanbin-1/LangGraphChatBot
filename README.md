@@ -63,6 +63,7 @@ route_after_grade：根据文档相关性评分决定生成回复还是重写查
 **(第五期)[2025.3.19]基于FastAPI、Gradio、LangChain、LangGraph框架实现工具调用和动态路由的分诊工作流用例并对外提供API服务**                      
 主要内容:在第四期视频的应用案例4的基础上，使用FastAPI封装API接口对外提供web服务，并使用Gradio实现一个web端页面支持新建会话、历史会话加载、用户注册和登录等                        
 https://youtu.be/xZQsGN46dUo         
+https://www.bilibili.com/video/BV1fzXPY7Es7/          
 
 
 ## 1.2 LangGraph介绍 
