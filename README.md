@@ -120,8 +120,9 @@ https://www.bilibili.com/video/BV1nvdpYCE33/
 (2)非gpt大模型方案 OneAPI方式或大模型厂商原生接口                                              
 (3)本地开源大模型方案(Ollama方式)                                              
 **具体参考如下视频:**                                           
-【大模型应用开发-入门系列】04 大模型LLM服务接口调用方案                                           
-https://youtu.be/mTrgVllUl7Y                                
+【大模型应用开发-入门系列】04 大模型LLM服务接口调用方案                    
+https://youtu.be/mTrgVllUl7Y               
+https://www.bilibili.com/video/BV1BvduYKE75/                                                    
                 
 
 # 3、项目初始化
