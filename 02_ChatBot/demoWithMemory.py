@@ -11,7 +11,7 @@ from langgraph.store.memory import InMemoryStore
 
 
 # openai:调用gpt模型,oneapi:调用oneapi方案支持的模型,ollama:调用本地开源大模型,qwen:调用阿里通义千问大模型
-llm_type = "openai"
+llm_type = "qwen"
 
 
 # 创建和配置chatbot的状态图
@@ -33,27 +33,32 @@ def create_graph(llm_type: str) -> StateGraph:
 
         # 自定义函数修剪和过滤state中的消息
         def filter_messages(messages: list):
-            if len(messages) <= 3:
+            if len(messages) <= 10:
                 return messages
-            return messages[-3:]
+            return messages[-10:]
 
         # 定义chatbot的node
         def chatbot(state: MessagesState, config: RunnableConfig, *, store: BaseStore):
             # 1、长期记忆逻辑
             # 设置命名空间 namespace
             namespace = ("memories", config["configurable"]["user_id"])
-            # 获取state中最新一条消息(用户问题)进行检索
-            memories = store.search(namespace, query=str(state["messages"][-1].content))
+
+            # 获取state中最新一条消息(用户问题)进行检索，store中存储的是数据库中的东西，对于下面这个逻辑，只有“记住”村子啊句子中才会被存到数据库中
+            memories = store.search(namespace, query=str(state["messages"][-1].content))  # 使用 embedding 模型对向量数据库进行向量相似度搜索
             info = "\n".join([d.value["data"] for d in memories])
+
             # 将检索到的知识拼接到系统prompt
             system_msg = f"You are a helpful assistant talking to the user. User info: {info}"
+
             # 获取state中的消息进行消息过滤后存储新的记忆
             last_message = state["messages"][-1]
             if "记住" in last_message.content.lower():
                 memory = "我的频道是南哥AGI研习社。"
                 store.put(namespace, str(uuid.uuid4()), {"data": memory})
-            # 2、短期记忆逻辑 进行消息过滤
+
+            # 2、短期记忆逻辑 进行消息过滤。state["messages"] 存储的是当前对话的全部消息历史
             messages = filter_messages(state["messages"])
+
             # 3、调用LLM
             response = llm.invoke(
                 [{"role": "system", "content": system_msg}] + messages
@@ -67,6 +72,7 @@ def create_graph(llm_type: str) -> StateGraph:
 
         # 这里使用内存存储 也可以持久化到数据库
         memory = MemorySaver()
+
         # 编译生成graph并返回
         return graph_builder.compile(checkpointer=memory, store=in_memory_store)
 
@@ -103,6 +109,7 @@ def main():
         print(f"Error: {str(e)}")
         sys.exit(1)
 
+    # 用户1
     # 测试1
     config = {"configurable": {"thread_id": "1", "user_id": "1"}}
     input_message = {"role": "user", "content": "记住：我的频道是南哥AGI研习社"}
@@ -115,6 +122,13 @@ def main():
     for chunk in graph.stream({"messages": [input_message]}, config, stream_mode="values"):
         chunk["messages"][-1].pretty_print()
 
+    # 测试2
+    config = {"configurable": {"thread_id": "2", "user_id": "1"}}
+    input_message = {"role": "user", "content": "我的频道是什么?"}
+    for chunk in graph.stream({"messages": [input_message]}, config, stream_mode="values"):
+        chunk["messages"][-1].pretty_print()
+
+    # 用户2
     # 测试3
     config = {"configurable": {"thread_id": "3", "user_id": "2"}}
     input_message = {"role": "user", "content": "我的频道是什么?"}

@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(level
 logger = logging.getLogger(__name__)
 
 
-url = "http://localhost:8012/v1/chat/completions"
+url = "http://localhost:8080/v1/chat/completions"
 headers = {"Content-Type": "application/json"}
 
 

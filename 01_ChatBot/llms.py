@@ -26,8 +26,8 @@ MODEL_CONFIGS = {
     },
     "qwen": {
         "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
-        "api_key": "sk-5cee351038c943648971907366eabafe",
-        "model": "qwen-max"
+        "api_key": "sk-1c87f1d7b59346cca9e8cc7f97ee57f5",
+        "model": "deepseek-r1"  # deepseek-r1-distill-llama-70b
     },
     "ollama": {
         "base_url": "http://localhost:11434/v1",
@@ -38,7 +38,7 @@ MODEL_CONFIGS = {
 
 
 # 默认配置
-DEFAULT_LLM_TYPE = "openai"
+DEFAULT_LLM_TYPE = "qwen"
 DEFAULT_TEMPERATURE = 0.7
 
 
@@ -77,7 +77,7 @@ def initialize_llm(llm_type: str = DEFAULT_LLM_TYPE) -> Optional[ChatOpenAI]:
             api_key=config["api_key"],
             model=config["model"],
             temperature=DEFAULT_TEMPERATURE,
-            timeout=30,  # 添加超时配置（秒）
+            timeout=300,  # 添加超时配置（秒）
             max_retries=2  # 添加重试次数
         )
 
@@ -115,10 +115,12 @@ def get_llm(llm_type: str = DEFAULT_LLM_TYPE) -> ChatOpenAI:
 if __name__ == "__main__":
     try:
         # 测试不同类型的LLM初始化
-        llm_openai = get_llm("openai")
+        # llm_openai = get_llm("openai")
         llm_qwen = get_llm("qwen")
+        response = llm_qwen.invoke("你好")
 
+        print(response.content)
         # 测试无效类型
-        llm_invalid = get_llm("invalid_type")
+        # llm_invalid = get_llm("invalid_type")
     except LLMInitializationError as e:
         logger.error(f"程序终止: {str(e)}")

@@ -1,6 +1,6 @@
 import os
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
-from langchain_openai import ChatOpenAI,OpenAIEmbeddings
+# from langchain_openai import ChatOpenAI,OpenAIEmbeddings
 from typing import Optional
 import logging
 
@@ -30,8 +30,8 @@ MODEL_CONFIGS = {
     },
     "qwen": {
         "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
-        "api_key": "sk-80a72f794bc4488d85798d590e96db43",
-        "chat_model": "qwen-max",
+        "api_key": "sk-1c87f1d7b59346cca9e8cc7f97ee57f5",
+        "chat_model": "deepseek-r1",
         "embedding_model": "text-embedding-v1"
     },
     "ollama": {
@@ -44,7 +44,7 @@ MODEL_CONFIGS = {
 
 
 # 默认配置
-DEFAULT_LLM_TYPE = "openai"
+DEFAULT_LLM_TYPE = "qwen"
 DEFAULT_TEMPERATURE = 0.7
 
 
@@ -87,12 +87,19 @@ def initialize_llm(llm_type: str = DEFAULT_LLM_TYPE) -> tuple[ChatOpenAI, OpenAI
             max_retries=2  # 添加重试次数
         )
 
-        embedding = OpenAIEmbeddings(
-            base_url=config["base_url"],
-            api_key=config["api_key"],
-            model=config["embedding_model"],
-            deployment=config["embedding_model"]
-        )
+        if DEFAULT_LLM_TYPE == "qwen":
+            from langchain_community.embeddings import DashScopeEmbeddings
+            embedding = DashScopeEmbeddings(
+                dashscope_api_key=config["api_key"], 
+                model=config["embedding_model"]
+            )
+        else:
+            embedding = OpenAIEmbeddings(
+                base_url=config["base_url"],
+                api_key=config["api_key"],
+                model=config["embedding_model"],
+                deployment=config["embedding_model"]
+            )
 
         logger.info(f"成功初始化 {llm_type} LLM")
         return llm, embedding
@@ -128,10 +135,12 @@ def get_llm(llm_type: str = DEFAULT_LLM_TYPE) -> ChatOpenAI:
 if __name__ == "__main__":
     try:
         # 测试不同类型的LLM初始化
-        llm_openai = get_llm("openai")
+        # llm_openai = get_llm("openai")
         llm_qwen = get_llm("qwen")
+        response = llm_qwen.invoke("你好")
 
+        print(response.content)
         # 测试无效类型
-        llm_invalid = get_llm("invalid_type")
+        # llm_invalid = get_llm("invalid_type")
     except LLMInitializationError as e:
         logger.error(f"程序终止: {str(e)}")

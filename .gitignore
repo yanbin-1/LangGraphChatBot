@@ -1,0 +1,4 @@
+.gradio/
+01_ChatBot/__pycache__/
+02_ChatBot/__pycache__/
+graph.png

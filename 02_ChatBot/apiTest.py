@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(level
 logger = logging.getLogger(__name__)
 
 
-url = "http://localhost:8012/v1/chat/completions"
+url = "http://localhost:8080/v1/chat/completions"
 headers = {"Content-Type": "application/json"}
 
 
@@ -39,8 +39,8 @@ input_text = "记住你的名字是南哥。"
 data = {
     "messages": [{"role": "user", "content": input_text}],
     "stream": stream_flag,
-    "userId":"123456",
-    "conversationId":"123456"
+    "userId":"456",
+    "conversationId":"456"
 }
 
 

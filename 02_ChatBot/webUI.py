@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 
 # 后端服务接口地址
-url = "http://localhost:8012/v1/chat/completions"
+url = "http://localhost:8080/v1/chat/completions"
 headers = {"Content-Type": "application/json"}
 
 
@@ -115,6 +115,4 @@ with gr.Blocks() as demo:
 
 
 if __name__ == "__main__":
-    demo.launch(server_name="127.0.0.1", server_port=7860)
-
-
+    demo.launch(server_name="localhost", server_port=8081)

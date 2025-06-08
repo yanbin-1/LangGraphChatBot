@@ -24,7 +24,7 @@ import uvicorn
 
 # 设置LangSmith环境变量 进行应用跟踪，实时了解应用中的每一步发生了什么
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
-os.environ["LANGCHAIN_API_KEY"] = "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"
+os.environ["LANGCHAIN_API_KEY"] = "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"
 
 
 # 设置日志模版
@@ -33,14 +33,14 @@ logger = logging.getLogger(__name__)
 
 
 # prompt模版设置相关 根据自己的实际业务进行调整
-PROMPT_TEMPLATE_TXT_SYS = "prompt_template_system.txt"
-PROMPT_TEMPLATE_TXT_USER = "prompt_template_user.txt"
+PROMPT_TEMPLATE_TXT_SYS = os.path.join(os.path.dirname(__file__), "prompt_template_system.txt")
+PROMPT_TEMPLATE_TXT_USER = os.path.join(os.path.dirname(__file__), "prompt_template_user.txt")
 
 # openai:调用gpt模型,oneapi:调用oneapi方案支持的模型,ollama:调用本地开源大模型,qwen:调用阿里通义千问大模型
-llm_type = "ollama"
+llm_type = "qwen"
 
 # API服务设置相关
-PORT = 8012
+PORT = 8080
 
 # 申明全局变量 全局调用
 graph = None
@@ -196,8 +196,8 @@ async def chat_completions(request: ChatCompletionRequest):
         config = {"configurable": {"thread_id": request.userId+"@@"+request.conversationId}}
         logger.info(f"用户当前会话信息: {config}")
 
-        prompt_template_system = PromptTemplate.from_file(PROMPT_TEMPLATE_TXT_SYS)
-        prompt_template_user = PromptTemplate.from_file(PROMPT_TEMPLATE_TXT_USER)
+        prompt_template_system = PromptTemplate.from_file(PROMPT_TEMPLATE_TXT_SYS, encoding="utf-8")
+        prompt_template_user = PromptTemplate.from_file(PROMPT_TEMPLATE_TXT_USER, encoding="utf-8")
         prompt = [
             {"role": "system", "content": prompt_template_system.template},
             {"role": "user", "content": prompt_template_user.template.format(query=query_prompt)}
@@ -220,6 +220,7 @@ async def chat_completions(request: ChatCompletionRequest):
         # 处理非流式响应处理
         else:
             try:
+                # 遍历节点，同时由于之前在存储节点的时候保存了历史信息，这里会参考历史信息
                 events = graph.stream({"messages": prompt}, config)
                 for event in events:
                     for value in event.values():
@@ -254,6 +255,6 @@ if __name__ == "__main__":
     logger.info(f"在端口 {PORT} 上启动服务器")
     # uvicorn是一个用于运行ASGI应用的轻量级、超快速的ASGI服务器实现
     # 用于部署基于FastAPI框架的异步PythonWeb应用程序
-    uvicorn.run(app, host="0.0.0.0", port=PORT)
+    uvicorn.run(app, host="localhost", port=PORT)
 
 
