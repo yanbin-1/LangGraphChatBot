@@ -3,7 +3,7 @@ import json
 import logging
 
 
-# Author:@南哥AGI研习社 (B站 or YouTube 搜索“南哥AGI研习社”)
+# Author:@彦斌AGI研习社 (B站 or YouTube 搜索“彦斌AGI研习社”)
 
 
 # 设置日志模版
@@ -19,15 +19,15 @@ headers = {"Content-Type": "application/json"}
 stream_flag = False
 
 
-# input_text = "记住你的名字是南哥。"
-# input_text = "200元以下，流量大的套餐有啥？"
+# input_text = "记住你的名字是彦斌。"
+input_text = "200元以下，流量大的套餐有啥？"
 # input_text = "你叫什么名字？"
 # input_text = "就刚刚提到的这个套餐，是多少钱？"
 # input_text = "有没有豪华套餐？"
 # input_text = "你叫什么名字？"
 
 
-input_text = "你的名字是南哥。"
+# input_text = "你的名字是彦斌。"
 # input_text = "200元以下，流量大的套餐有啥？"
 # input_text = "你叫什么名字？"
 # input_text = "就刚刚提到的这个套餐，是多少钱？"

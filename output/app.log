@@ -1,0 +1,511 @@
+2025-06-21 13:57:26,677 - __main__ - INFO - Start the server on port 8012
+2025-06-21 13:57:30,625 - demoRagAgent - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-06-21 13:57:30,626 - demoRagAgent - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-06-21 13:57:30,627 - demoRagAgent - INFO - Initialized ToolConfig with tools: {'retrieve', 'multiply'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-06-21 13:57:30,634 - __main__ - INFO - Database connection pool initialized
+2025-06-21 13:57:30,637 - __main__ - DEBUG - Database connection pool initialized
+2025-06-21 13:57:30,642 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 13:57:30,812 - demoRagAgent - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-06-21 13:57:33,883 - demoRagAgent - INFO - Graph visualization saved as graph.png
+2025-06-21 13:57:48,433 - __main__ - INFO - The user's user_input is: 你好
+2025-06-21 13:57:48,675 - demoRagAgent - INFO - Agent processing user query
+2025-06-21 13:57:49,064 - demoRagAgent - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 13:57:49,064 - demoRagAgent - ERROR - Error in agent processing: 'gbk' codec can't decode byte 0x80 in position 8: illegal multibyte sequence
+2025-06-21 13:58:17,302 - __main__ - INFO - The user's user_input is: 你好
+2025-06-21 13:58:17,325 - demoRagAgent - INFO - Agent processing user query
+2025-06-21 13:58:17,847 - demoRagAgent - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 13:58:17,848 - demoRagAgent - ERROR - Error in agent processing: 'gbk' codec can't decode byte 0x80 in position 8: illegal multibyte sequence
+2025-06-21 13:58:17,908 - __main__ - INFO - Message has no content, skipping
+2025-06-21 13:58:17,911 - __main__ - INFO - Results for Formatting: No response generated
+2025-06-21 13:58:17,912 - __main__ - INFO - Send response content: 
+id='chatcmpl-454bdf50449c460991ec59eb9ad7c5c2' object='chat.completion' created=1750485497 choices=[ChatCompletionResponseChoice(index=0, message=Message(role='assistant', content='No response generated'), finish_reason='stop')] system_fingerprint=None
+2025-06-21 13:58:29,728 - __main__ - INFO - Start the server on port 8012
+2025-06-21 13:58:30,654 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 13:58:33,772 - demoRagAgent - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-06-21 13:58:33,773 - demoRagAgent - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-06-21 13:58:33,774 - demoRagAgent - INFO - Initialized ToolConfig with tools: {'multiply', 'retrieve'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-06-21 13:58:33,781 - __main__ - INFO - Database connection pool initialized
+2025-06-21 13:58:33,785 - __main__ - DEBUG - Database connection pool initialized
+2025-06-21 13:58:33,789 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 13:58:33,945 - demoRagAgent - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-06-21 13:58:35,179 - demoRagAgent - INFO - Graph visualization saved as graph.png
+2025-06-21 13:58:35,182 - __main__ - INFO - Database connection pool closed
+2025-06-21 13:58:35,183 - __main__ - INFO - The service has been shut down
+2025-06-21 13:58:48,796 - __main__ - INFO - The user's user_input is: 你好
+2025-06-21 13:58:55,195 - demoRagAgent - INFO - Agent processing user query
+2025-06-21 13:58:55,549 - demoRagAgent - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 13:58:55,551 - demoRagAgent - ERROR - Error in agent processing: 'gbk' codec can't decode byte 0x80 in position 8: illegal multibyte sequence
+2025-06-21 14:00:36,463 - __main__ - INFO - Start the server on port 8012
+2025-06-21 14:00:40,411 - demoRagAgent - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-06-21 14:00:40,413 - demoRagAgent - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-06-21 14:00:40,414 - demoRagAgent - INFO - Initialized ToolConfig with tools: {'multiply', 'retrieve'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-06-21 14:00:40,421 - __main__ - INFO - Database connection pool initialized
+2025-06-21 14:00:40,423 - __main__ - DEBUG - Database connection pool initialized
+2025-06-21 14:00:57,415 - demoRagAgent - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-06-21 14:01:14,831 - demoRagAgent - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 14:01:16,238 - demoRagAgent - INFO - Graph visualization saved as graph.png
+2025-06-21 14:54:21,630 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-06-21 14:54:21,643 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-06-21 14:54:21,644 - __main__ - INFO - Initialized ToolConfig with tools: {'multiply', 'retrieve'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-06-21 14:54:21,650 - __main__ - INFO - Database connection pool initialized
+2025-06-21 14:54:21,657 - __main__ - DEBUG - Database connection pool initialized
+2025-06-21 14:54:21,664 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 14:54:21,815 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-06-21 14:54:22,943 - __main__ - INFO - Graph visualization saved as graph.png
+2025-06-21 14:55:21,682 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 14:56:21,693 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 14:57:21,709 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 14:58:30,205 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-06-21 14:58:30,212 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-06-21 14:58:30,213 - __main__ - INFO - Initialized ToolConfig with tools: {'multiply', 'retrieve'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-06-21 14:58:30,223 - __main__ - INFO - Database connection pool initialized
+2025-06-21 14:58:30,235 - __main__ - DEBUG - Database connection pool initialized
+2025-06-21 14:58:30,248 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 14:58:30,411 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-06-21 14:58:34,950 - __main__ - INFO - Graph visualization saved as graph.png
+2025-06-21 14:58:37,560 - __main__ - INFO - Agent processing user query
+2025-06-21 14:58:38,048 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 14:58:38,081 - __main__ - ERROR - Error in agent processing: 'gbk' codec can't decode byte 0x80 in position 8: illegal multibyte sequence
+2025-06-21 14:58:38,090 - __main__ - INFO - Message has no content, skipping
+2025-06-21 14:59:17,536 - __main__ - INFO - Agent processing user query
+2025-06-21 14:59:17,991 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 14:59:17,992 - __main__ - ERROR - Error in agent processing: 'gbk' codec can't decode byte 0x80 in position 8: illegal multibyte sequence
+2025-06-21 14:59:18,024 - __main__ - INFO - Message has no content, skipping
+2025-06-21 14:59:33,935 - __main__ - INFO - Agent processing user query
+2025-06-21 14:59:33,941 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 14:59:34,238 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 14:59:34,240 - __main__ - ERROR - Error in agent processing: 'gbk' codec can't decode byte 0x80 in position 8: illegal multibyte sequence
+2025-06-21 15:00:19,329 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-06-21 15:00:19,336 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-06-21 15:00:19,337 - __main__ - INFO - Initialized ToolConfig with tools: {'retrieve', 'multiply'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-06-21 15:00:19,343 - __main__ - INFO - Database connection pool initialized
+2025-06-21 15:00:19,346 - __main__ - DEBUG - Database connection pool initialized
+2025-06-21 15:00:21,369 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-06-21 15:00:45,920 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-06-21 15:00:45,926 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-06-21 15:00:45,927 - __main__ - INFO - Initialized ToolConfig with tools: {'multiply', 'retrieve'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-06-21 15:00:45,934 - __main__ - INFO - Database connection pool initialized
+2025-06-21 15:00:45,938 - __main__ - DEBUG - Database connection pool initialized
+2025-06-21 15:00:52,711 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-06-21 15:01:04,484 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:01:09,399 - __main__ - INFO - Graph visualization saved as graph.png
+2025-06-21 15:01:41,852 - __main__ - INFO - Agent processing user query
+2025-06-21 15:01:42,395 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 15:01:42,397 - __main__ - ERROR - Error in agent processing: 'gbk' codec can't decode byte 0x80 in position 8: illegal multibyte sequence
+2025-06-21 15:04:02,335 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-06-21 15:04:02,342 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-06-21 15:04:02,343 - __main__ - INFO - Initialized ToolConfig with tools: {'retrieve', 'multiply'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-06-21 15:04:02,350 - __main__ - INFO - Database connection pool initialized
+2025-06-21 15:04:02,353 - __main__ - DEBUG - Database connection pool initialized
+2025-06-21 15:08:12,492 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-06-21 15:08:12,604 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:08:17,080 - __main__ - INFO - Graph visualization saved as graph.png
+2025-06-21 15:08:28,104 - __main__ - INFO - Agent processing user query
+2025-06-21 15:09:59,758 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 15:10:39,304 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-06-21 15:10:39,310 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-06-21 15:10:39,311 - __main__ - INFO - Initialized ToolConfig with tools: {'multiply', 'retrieve'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-06-21 15:10:39,318 - __main__ - INFO - Database connection pool initialized
+2025-06-21 15:10:39,323 - __main__ - DEBUG - Database connection pool initialized
+2025-06-21 15:10:43,447 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-06-21 15:10:43,608 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:10:45,417 - __main__ - INFO - Graph visualization saved as graph.png
+2025-06-21 15:10:53,731 - __main__ - INFO - Agent processing user query
+2025-06-21 15:10:54,185 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 15:10:54,554 - __main__ - ERROR - Error in agent processing: Error code: 400 - {'error': {'code': 'invalid_parameter_error', 'param': None, 'message': '<400> InternalError.Algo.InvalidParameter: The tool call is not supported.', 'type': 'invalid_request_error'}, 'id': 'chatcmpl-98b93775-81fa-9a5a-ba1e-ef6c6a0ed214', 'request_id': '98b93775-81fa-9a5a-ba1e-ef6c6a0ed214'}
+2025-06-21 15:10:54,570 - __main__ - INFO - Message has no content, skipping
+2025-06-21 15:11:43,611 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:12:43,615 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:13:43,630 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:14:43,639 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:15:43,645 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:16:43,654 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:17:43,667 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:18:26,375 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-06-21 15:18:26,382 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-06-21 15:18:26,383 - __main__ - INFO - Initialized ToolConfig with tools: {'multiply', 'retrieve'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-06-21 15:18:26,390 - __main__ - INFO - Database connection pool initialized
+2025-06-21 15:18:26,394 - __main__ - DEBUG - Database connection pool initialized
+2025-06-21 15:18:26,397 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:18:26,561 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-06-21 15:18:28,609 - __main__ - INFO - Graph visualization saved as graph.png
+2025-06-21 15:19:26,404 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:20:26,418 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:21:26,424 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:22:26,440 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:23:26,457 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:24:26,470 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:25:26,476 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:25:26,974 - __main__ - INFO - Agent processing user query
+2025-06-21 15:25:27,643 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 15:25:27,995 - __main__ - ERROR - Error in agent processing: Error code: 400 - {'error': {'code': 'invalid_parameter_error', 'param': None, 'message': '<400> InternalError.Algo.InvalidParameter: The tool call is not supported.', 'type': 'invalid_request_error'}, 'id': 'chatcmpl-cd65e860-8b84-9f52-b6c7-8041167d1f85', 'request_id': 'cd65e860-8b84-9f52-b6c7-8041167d1f85'}
+2025-06-21 15:25:28,007 - __main__ - INFO - Message has no content, skipping
+2025-06-21 15:25:35,488 - __main__ - INFO - Agent processing user query
+2025-06-21 15:25:35,816 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 15:25:36,184 - __main__ - ERROR - Error in agent processing: Error code: 400 - {'error': {'code': 'invalid_parameter_error', 'param': None, 'message': '<400> InternalError.Algo.InvalidParameter: The tool call is not supported.', 'type': 'invalid_request_error'}, 'id': 'chatcmpl-d6656638-7103-9c8d-a0ec-1d150540096c', 'request_id': 'd6656638-7103-9c8d-a0ec-1d150540096c'}
+2025-06-21 15:25:36,191 - __main__ - INFO - Message has no content, skipping
+2025-06-21 15:26:26,486 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:26:27,130 - __main__ - INFO - Agent processing user query
+2025-06-21 15:26:30,424 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 15:26:31,014 - __main__ - ERROR - Error in agent processing: Error code: 400 - {'error': {'code': 'invalid_parameter_error', 'param': None, 'message': '<400> InternalError.Algo.InvalidParameter: The tool call is not supported.', 'type': 'invalid_request_error'}, 'id': 'chatcmpl-3c9e6b2e-3a5e-9466-91e5-e51e45022662', 'request_id': '3c9e6b2e-3a5e-9466-91e5-e51e45022662'}
+2025-06-21 15:26:31,023 - __main__ - INFO - Message has no content, skipping
+2025-06-21 15:26:37,154 - __main__ - INFO - Agent processing user query
+2025-06-21 15:27:29,632 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 15:29:26,884 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:34:58,238 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-06-21 15:34:58,246 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-06-21 15:34:58,247 - __main__ - INFO - Initialized ToolConfig with tools: {'retrieve', 'multiply'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-06-21 15:34:58,253 - __main__ - INFO - Database connection pool initialized
+2025-06-21 15:34:58,256 - __main__ - DEBUG - Database connection pool initialized
+2025-06-21 15:34:58,262 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:34:58,451 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-06-21 15:35:00,070 - __main__ - INFO - Graph visualization saved as graph.png
+2025-06-21 15:35:11,543 - __main__ - INFO - Agent processing user query
+2025-06-21 15:35:14,973 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 15:44:19,304 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-06-21 15:44:19,310 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-06-21 15:44:19,311 - __main__ - INFO - Initialized ToolConfig with tools: {'multiply', 'retrieve'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-06-21 15:44:19,318 - __main__ - INFO - Database connection pool initialized
+2025-06-21 15:44:19,321 - __main__ - DEBUG - Database connection pool initialized
+2025-06-21 15:44:19,326 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:44:19,478 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-06-21 15:44:21,617 - __main__ - INFO - Graph visualization saved as graph.png
+2025-06-21 15:44:24,055 - __main__ - INFO - Agent processing user query
+2025-06-21 15:44:27,092 - __main__ - ERROR - Error in store_memory: Error code: 400 - {'error': {'code': 'Model.AccessDenied', 'param': None, 'message': 'Model access denied.', 'type': 'Model.AccessDenied'}, 'id': '05a71da8-070a-937d-a40f-0507936c32ba', 'request_id': '05a71da8-070a-937d-a40f-0507936c32ba'}
+2025-06-21 15:44:30,652 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 15:44:34,738 - __main__ - ERROR - Error in agent processing: Invalid json output: 你好！有什么我可以帮你的吗？
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+2025-06-21 15:44:34,758 - __main__ - INFO - Message has no content, skipping
+2025-06-21 15:45:09,172 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-06-21 15:45:09,178 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-06-21 15:45:09,179 - __main__ - INFO - Initialized ToolConfig with tools: {'multiply', 'retrieve'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-06-21 15:45:09,185 - __main__ - INFO - Database connection pool initialized
+2025-06-21 15:45:09,190 - __main__ - DEBUG - Database connection pool initialized
+2025-06-21 15:45:09,196 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:45:09,342 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-06-21 15:45:12,239 - __main__ - INFO - Graph visualization saved as graph.png
+2025-06-21 15:45:14,446 - __main__ - INFO - Agent processing user query
+2025-06-21 15:45:14,780 - __main__ - ERROR - Error in store_memory: Error code: 400 - {'error': {'code': 'Model.AccessDenied', 'param': None, 'message': 'Model access denied.', 'type': 'Model.AccessDenied'}, 'id': 'ba215e16-45c6-9d48-bb2b-3f387eb95cf5', 'request_id': 'ba215e16-45c6-9d48-bb2b-3f387eb95cf5'}
+2025-06-21 15:45:14,793 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 15:46:09,202 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:47:07,335 - __main__ - INFO - Agent processing user query
+2025-06-21 15:47:07,732 - __main__ - ERROR - Error in store_memory: Error code: 400 - {'error': {'code': 'Model.AccessDenied', 'param': None, 'message': 'Model access denied.', 'type': 'Model.AccessDenied'}, 'id': '8771c8cc-e9fd-978e-b4c8-987d8d4cb038', 'request_id': '8771c8cc-e9fd-978e-b4c8-987d8d4cb038'}
+2025-06-21 15:47:07,761 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 15:47:09,206 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:47:10,242 - __main__ - INFO - Calling tool: multiply
+2025-06-21 15:47:10,250 - __main__ - INFO - Tool multiply routed to generate based on config
+2025-06-21 15:47:10,253 - __main__ - INFO - Generating final response
+2025-06-21 15:47:10,256 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\..prompts/prompt_template_generate.txt
+2025-06-21 15:47:10,257 - __main__ - ERROR - Template file e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\..prompts/prompt_template_generate.txt not found
+2025-06-21 15:47:10,261 - __main__ - ERROR - Error processing response: [Errno 2] No such file or directory: 'e:\\Code\\GitProject\\LangGraphChatBot\\04_RagAgent\\utils\\..prompts\\prompt_template_generate.txt'
+2025-06-21 15:48:09,220 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:49:07,138 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-06-21 15:49:07,144 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-06-21 15:49:07,145 - __main__ - INFO - Initialized ToolConfig with tools: {'retrieve', 'multiply'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-06-21 15:49:07,152 - __main__ - INFO - Database connection pool initialized
+2025-06-21 15:49:07,157 - __main__ - DEBUG - Database connection pool initialized
+2025-06-21 15:49:07,161 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:49:07,313 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-06-21 15:49:08,117 - __main__ - INFO - Graph visualization saved as graph.png
+2025-06-21 15:49:11,676 - __main__ - INFO - Agent processing user query
+2025-06-21 15:49:12,030 - __main__ - ERROR - Error in store_memory: Error code: 400 - {'error': {'code': 'Model.AccessDenied', 'param': None, 'message': 'Model access denied.', 'type': 'Model.AccessDenied'}, 'id': 'edb90cdf-085a-9130-91a6-a66388011d54', 'request_id': 'edb90cdf-085a-9130-91a6-a66388011d54'}
+2025-06-21 15:49:12,043 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 15:49:13,736 - __main__ - INFO - Calling tool: multiply
+2025-06-21 15:49:13,744 - __main__ - INFO - Tool multiply routed to generate based on config
+2025-06-21 15:49:13,748 - __main__ - INFO - Generating final response
+2025-06-21 15:49:13,750 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_generate.txt
+2025-06-21 15:50:07,174 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:50:30,587 - __main__ - INFO - Agent processing user query
+2025-06-21 15:50:32,140 - __main__ - ERROR - Error in store_memory: Error code: 400 - {'error': {'code': 'Model.AccessDenied', 'param': None, 'message': 'Model access denied.', 'type': 'Model.AccessDenied'}, 'id': 'b2d188aa-f521-9a25-80d5-9eab9725a817', 'request_id': 'b2d188aa-f521-9a25-80d5-9eab9725a817'}
+2025-06-21 15:50:32,148 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 15:50:34,828 - __main__ - INFO - Calling tool: retrieve
+2025-06-21 15:50:34,940 - __main__ - INFO - Tool retrieve routed to grade_documents based on config
+2025-06-21 15:50:34,943 - __main__ - INFO - Grading documents for relevance
+2025-06-21 15:50:34,946 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_grade.txt
+2025-06-21 15:50:36,691 - __main__ - INFO - Document relevance score: no
+2025-06-21 15:50:36,694 - __main__ - INFO - Routing based on relevance_score: no, rewrite_count: 0
+2025-06-21 15:50:36,695 - __main__ - INFO - Documents are not relevant or scoring failed, proceeding to rewrite
+2025-06-21 15:50:36,699 - __main__ - INFO - Rewriting query
+2025-06-21 15:50:36,700 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_rewrite.txt
+2025-06-21 15:50:37,740 - __main__ - INFO - Rewrite count: 1
+2025-06-21 15:50:37,748 - __main__ - INFO - Agent processing user query
+2025-06-21 15:50:37,867 - __main__ - ERROR - Error in store_memory: Error code: 400 - {'error': {'code': 'Model.AccessDenied', 'param': None, 'message': 'Model access denied.', 'type': 'Model.AccessDenied'}, 'id': '16a40a59-6492-9651-9fe1-f5f55ffef81f', 'request_id': '16a40a59-6492-9651-9fe1-f5f55ffef81f'}
+2025-06-21 15:50:37,876 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 15:50:41,739 - __main__ - INFO - Calling tool: retrieve
+2025-06-21 15:50:41,863 - __main__ - INFO - Tool retrieve routed to grade_documents based on config
+2025-06-21 15:50:41,867 - __main__ - INFO - Grading documents for relevance
+2025-06-21 15:50:41,869 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_grade.txt
+2025-06-21 15:50:43,131 - __main__ - INFO - Document relevance score: no
+2025-06-21 15:50:43,133 - __main__ - INFO - Routing based on relevance_score: no, rewrite_count: 1
+2025-06-21 15:50:43,134 - __main__ - INFO - Documents are not relevant or scoring failed, proceeding to rewrite
+2025-06-21 15:50:43,137 - __main__ - INFO - Rewriting query
+2025-06-21 15:50:43,142 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_rewrite.txt
+2025-06-21 15:50:44,586 - __main__ - INFO - Rewrite count: 2
+2025-06-21 15:50:44,589 - __main__ - INFO - Agent processing user query
+2025-06-21 15:50:44,706 - __main__ - ERROR - Error in store_memory: Error code: 400 - {'error': {'code': 'Model.AccessDenied', 'param': None, 'message': 'Model access denied.', 'type': 'Model.AccessDenied'}, 'id': '388c6e98-856c-9b34-9ac0-cb0f34d4053c', 'request_id': '388c6e98-856c-9b34-9ac0-cb0f34d4053c'}
+2025-06-21 15:50:44,716 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 15:50:47,098 - __main__ - INFO - Calling tool: retrieve
+2025-06-21 15:50:47,244 - __main__ - INFO - Tool retrieve routed to grade_documents based on config
+2025-06-21 15:50:47,516 - __main__ - INFO - Grading documents for relevance
+2025-06-21 15:50:47,528 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_grade.txt
+2025-06-21 15:50:49,098 - __main__ - INFO - Document relevance score: no
+2025-06-21 15:50:49,105 - __main__ - INFO - Routing based on relevance_score: no, rewrite_count: 2
+2025-06-21 15:50:49,107 - __main__ - INFO - Documents are not relevant or scoring failed, proceeding to rewrite
+2025-06-21 15:50:49,123 - __main__ - INFO - Rewriting query
+2025-06-21 15:50:49,133 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_rewrite.txt
+2025-06-21 15:50:51,037 - __main__ - INFO - Rewrite count: 3
+2025-06-21 15:50:51,049 - __main__ - INFO - Agent processing user query
+2025-06-21 15:50:51,170 - __main__ - ERROR - Error in store_memory: Error code: 400 - {'error': {'code': 'Model.AccessDenied', 'param': None, 'message': 'Model access denied.', 'type': 'Model.AccessDenied'}, 'id': 'a036598c-f745-9df2-880c-f1e8c0da0099', 'request_id': 'a036598c-f745-9df2-880c-f1e8c0da0099'}
+2025-06-21 15:50:51,189 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 15:50:58,580 - __main__ - INFO - Calling tool: retrieve
+2025-06-21 15:50:59,672 - __main__ - INFO - Tool retrieve routed to grade_documents based on config
+2025-06-21 15:50:59,678 - __main__ - INFO - Grading documents for relevance
+2025-06-21 15:50:59,683 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_grade.txt
+2025-06-21 15:51:01,066 - __main__ - INFO - Document relevance score: no
+2025-06-21 15:51:01,072 - __main__ - INFO - Routing based on relevance_score: no, rewrite_count: 3
+2025-06-21 15:51:01,074 - __main__ - INFO - Max rewrite limit reached, proceeding to generate
+2025-06-21 15:51:01,084 - __main__ - INFO - Generating final response
+2025-06-21 15:51:01,102 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_generate.txt
+2025-06-21 15:51:07,190 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:52:07,205 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:53:07,211 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:54:07,220 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:55:07,234 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:56:07,255 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 15:57:07,263 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 16:02:15,930 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-06-21 16:02:15,936 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-06-21 16:02:15,937 - __main__ - INFO - Initialized ToolConfig with tools: {'retrieve', 'multiply'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-06-21 16:02:15,943 - __main__ - INFO - Database connection pool initialized
+2025-06-21 16:02:15,946 - __main__ - DEBUG - Database connection pool initialized
+2025-06-21 16:02:15,950 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 16:02:16,174 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-06-21 16:02:17,581 - __main__ - INFO - Graph visualization saved as graph.png
+2025-06-21 16:02:52,161 - __main__ - INFO - Agent processing user query
+2025-06-21 16:02:52,868 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 16:02:55,139 - __main__ - INFO - Calling tool: retrieve
+2025-06-21 16:02:55,389 - __main__ - INFO - Tool retrieve routed to grade_documents based on config
+2025-06-21 16:02:55,392 - __main__ - INFO - Grading documents for relevance
+2025-06-21 16:02:55,394 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_grade.txt
+2025-06-21 16:02:56,453 - __main__ - INFO - Document relevance score: no
+2025-06-21 16:02:56,455 - __main__ - INFO - Routing based on relevance_score: no, rewrite_count: 0
+2025-06-21 16:02:56,456 - __main__ - INFO - Documents are not relevant or scoring failed, proceeding to rewrite
+2025-06-21 16:02:56,460 - __main__ - INFO - Rewriting query
+2025-06-21 16:02:56,461 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_rewrite.txt
+2025-06-21 16:02:57,403 - __main__ - INFO - Rewrite count: 1
+2025-06-21 16:02:57,407 - __main__ - INFO - Agent processing user query
+2025-06-21 16:02:57,579 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 16:02:59,030 - __main__ - INFO - Calling tool: retrieve
+2025-06-21 16:02:59,277 - __main__ - INFO - Tool retrieve routed to grade_documents based on config
+2025-06-21 16:02:59,466 - __main__ - INFO - Grading documents for relevance
+2025-06-21 16:02:59,469 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_grade.txt
+2025-06-21 16:03:00,785 - __main__ - INFO - Document relevance score: no
+2025-06-21 16:03:00,787 - __main__ - INFO - Routing based on relevance_score: no, rewrite_count: 1
+2025-06-21 16:03:00,788 - __main__ - INFO - Documents are not relevant or scoring failed, proceeding to rewrite
+2025-06-21 16:03:00,792 - __main__ - INFO - Rewriting query
+2025-06-21 16:03:00,794 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_rewrite.txt
+2025-06-21 16:03:01,495 - __main__ - INFO - Rewrite count: 2
+2025-06-21 16:03:01,498 - __main__ - INFO - Agent processing user query
+2025-06-21 16:03:01,720 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 16:03:04,184 - __main__ - INFO - Calling tool: retrieve
+2025-06-21 16:03:04,425 - __main__ - INFO - Tool retrieve routed to grade_documents based on config
+2025-06-21 16:03:04,430 - __main__ - INFO - Grading documents for relevance
+2025-06-21 16:03:04,433 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_grade.txt
+2025-06-21 16:03:05,258 - __main__ - INFO - Document relevance score: no
+2025-06-21 16:03:05,260 - __main__ - INFO - Routing based on relevance_score: no, rewrite_count: 2
+2025-06-21 16:03:05,262 - __main__ - INFO - Documents are not relevant or scoring failed, proceeding to rewrite
+2025-06-21 16:03:05,267 - __main__ - INFO - Rewriting query
+2025-06-21 16:03:05,269 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_rewrite.txt
+2025-06-21 16:03:06,205 - __main__ - INFO - Rewrite count: 3
+2025-06-21 16:03:06,211 - __main__ - INFO - Agent processing user query
+2025-06-21 16:03:06,428 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 16:03:08,530 - __main__ - INFO - Calling tool: retrieve
+2025-06-21 16:03:10,021 - __main__ - INFO - Tool retrieve routed to grade_documents based on config
+2025-06-21 16:03:10,025 - __main__ - INFO - Grading documents for relevance
+2025-06-21 16:03:10,026 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_grade.txt
+2025-06-21 16:03:10,842 - __main__ - INFO - Document relevance score: no
+2025-06-21 16:03:10,844 - __main__ - INFO - Routing based on relevance_score: no, rewrite_count: 3
+2025-06-21 16:03:10,845 - __main__ - INFO - Max rewrite limit reached, proceeding to generate
+2025-06-21 16:03:10,850 - __main__ - INFO - Generating final response
+2025-06-21 16:03:10,851 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_generate.txt
+2025-06-21 16:03:15,959 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 16:06:02,961 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-06-21 16:06:02,967 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-06-21 16:06:02,968 - __main__ - INFO - Initialized ToolConfig with tools: {'multiply', 'retrieve'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-06-21 16:06:02,974 - __main__ - INFO - Database connection pool initialized
+2025-06-21 16:06:02,977 - __main__ - DEBUG - Database connection pool initialized
+2025-06-21 16:06:02,983 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 16:06:03,130 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-06-21 16:06:04,490 - __main__ - INFO - Graph visualization saved as graph.png
+2025-06-21 16:06:36,326 - __main__ - INFO - Agent processing user query
+2025-06-21 16:06:36,710 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 16:06:38,869 - __main__ - INFO - Calling tool: retrieve
+2025-06-21 16:06:39,194 - __main__ - INFO - Tool retrieve routed to grade_documents based on config
+2025-06-21 16:06:39,197 - __main__ - INFO - Grading documents for relevance
+2025-06-21 16:06:39,200 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_grade.txt
+2025-06-21 16:06:39,988 - __main__ - INFO - Document relevance score: no
+2025-06-21 16:06:39,990 - __main__ - INFO - Routing based on relevance_score: no, rewrite_count: 0
+2025-06-21 16:06:39,992 - __main__ - INFO - Documents are not relevant or scoring failed, proceeding to rewrite
+2025-06-21 16:06:39,998 - __main__ - INFO - Rewriting query
+2025-06-21 16:06:39,999 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_rewrite.txt
+2025-06-21 16:06:41,035 - __main__ - INFO - Rewrite count: 1
+2025-06-21 16:06:41,042 - __main__ - INFO - Agent processing user query
+2025-06-21 16:06:41,266 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 16:06:43,033 - __main__ - INFO - Calling tool: retrieve
+2025-06-21 16:06:43,287 - __main__ - INFO - Tool retrieve routed to grade_documents based on config
+2025-06-21 16:06:43,290 - __main__ - INFO - Grading documents for relevance
+2025-06-21 16:06:43,292 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_grade.txt
+2025-06-21 16:06:44,072 - __main__ - INFO - Document relevance score: no
+2025-06-21 16:06:44,075 - __main__ - INFO - Routing based on relevance_score: no, rewrite_count: 1
+2025-06-21 16:06:44,076 - __main__ - INFO - Documents are not relevant or scoring failed, proceeding to rewrite
+2025-06-21 16:06:44,080 - __main__ - INFO - Rewriting query
+2025-06-21 16:06:44,082 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_rewrite.txt
+2025-06-21 16:06:44,902 - __main__ - INFO - Rewrite count: 2
+2025-06-21 16:06:44,905 - __main__ - INFO - Agent processing user query
+2025-06-21 16:06:45,078 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 16:06:46,899 - __main__ - INFO - Calling tool: retrieve
+2025-06-21 16:06:47,165 - __main__ - INFO - Tool retrieve routed to grade_documents based on config
+2025-06-21 16:06:47,170 - __main__ - INFO - Grading documents for relevance
+2025-06-21 16:06:47,172 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_grade.txt
+2025-06-21 16:06:47,953 - __main__ - INFO - Document relevance score: no
+2025-06-21 16:06:47,957 - __main__ - INFO - Routing based on relevance_score: no, rewrite_count: 2
+2025-06-21 16:06:47,958 - __main__ - INFO - Documents are not relevant or scoring failed, proceeding to rewrite
+2025-06-21 16:06:47,962 - __main__ - INFO - Rewriting query
+2025-06-21 16:06:47,963 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_rewrite.txt
+2025-06-21 16:06:48,885 - __main__ - INFO - Rewrite count: 3
+2025-06-21 16:06:48,893 - __main__ - INFO - Agent processing user query
+2025-06-21 16:06:49,159 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 16:06:51,034 - __main__ - INFO - Calling tool: retrieve
+2025-06-21 16:06:51,221 - __main__ - INFO - Tool retrieve routed to grade_documents based on config
+2025-06-21 16:06:51,226 - __main__ - INFO - Grading documents for relevance
+2025-06-21 16:06:51,231 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_grade.txt
+2025-06-21 16:06:52,357 - __main__ - INFO - Document relevance score: no
+2025-06-21 16:06:52,359 - __main__ - INFO - Routing based on relevance_score: no, rewrite_count: 3
+2025-06-21 16:06:52,360 - __main__ - INFO - Max rewrite limit reached, proceeding to generate
+2025-06-21 16:06:52,365 - __main__ - INFO - Generating final response
+2025-06-21 16:06:52,366 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_generate.txt
+2025-06-21 16:07:03,001 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 16:43:48,311 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-06-21 16:43:48,319 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-06-21 16:43:48,320 - __main__ - INFO - Initialized ToolConfig with tools: {'retrieve', 'multiply'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-06-21 16:43:48,326 - __main__ - INFO - Database connection pool initialized
+2025-06-21 16:43:48,329 - __main__ - DEBUG - Database connection pool initialized
+2025-06-21 16:43:48,335 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 16:43:48,463 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-06-21 16:43:51,795 - __main__ - INFO - Graph visualization saved as graph.png
+2025-06-21 16:43:55,987 - __main__ - INFO - Agent processing user query
+2025-06-21 16:43:56,461 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 16:43:58,181 - __main__ - INFO - Calling tool: retrieve
+2025-06-21 16:43:58,483 - __main__ - INFO - Tool retrieve routed to grade_documents based on config
+2025-06-21 16:43:58,487 - __main__ - INFO - Grading documents for relevance
+2025-06-21 16:43:58,488 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_grade.txt
+2025-06-21 16:44:00,111 - __main__ - INFO - Document relevance score: yes
+2025-06-21 16:44:00,113 - __main__ - INFO - Routing based on relevance_score: yes, rewrite_count: 0
+2025-06-21 16:44:00,115 - __main__ - INFO - Documents are relevant, proceeding to generate
+2025-06-21 16:44:00,119 - __main__ - INFO - Generating final response
+2025-06-21 16:44:00,120 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_generate.txt
+2025-06-21 16:44:48,351 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 16:45:31,803 - __main__ - ERROR - Error processing response: Request timed out.
+2025-06-21 16:45:48,358 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 16:46:48,369 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 16:47:48,378 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 16:48:48,395 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 16:49:48,405 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 16:50:48,424 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 16:51:45,906 - __main__ - INFO - Agent processing user query
+2025-06-21 16:51:46,386 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 16:51:47,955 - __main__ - INFO - Calling tool: retrieve
+2025-06-21 16:51:48,153 - __main__ - INFO - Tool retrieve routed to grade_documents based on config
+2025-06-21 16:51:48,157 - __main__ - INFO - Grading documents for relevance
+2025-06-21 16:51:48,159 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_grade.txt
+2025-06-21 16:51:48,438 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 16:51:49,834 - __main__ - INFO - Document relevance score: yes
+2025-06-21 16:51:49,837 - __main__ - INFO - Routing based on relevance_score: yes, rewrite_count: 0
+2025-06-21 16:51:49,838 - __main__ - INFO - Documents are relevant, proceeding to generate
+2025-06-21 16:51:54,624 - __main__ - INFO - Generating final response
+2025-06-21 16:52:25,667 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_generate.txt
+2025-06-21 16:54:41,668 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 16:54:54,282 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-06-21 16:54:54,291 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-06-21 16:54:54,292 - __main__ - INFO - Initialized ToolConfig with tools: {'retrieve', 'multiply'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-06-21 16:54:54,298 - __main__ - INFO - Database connection pool initialized
+2025-06-21 16:54:54,302 - __main__ - DEBUG - Database connection pool initialized
+2025-06-21 16:54:54,305 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 16:54:54,555 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-06-21 16:54:58,495 - __main__ - INFO - Graph visualization saved as graph.png
+2025-06-21 16:55:18,451 - __main__ - INFO - Agent processing user query
+2025-06-21 16:55:18,828 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 16:55:30,500 - __main__ - INFO - Calling tool: retrieve
+2025-06-21 16:55:30,882 - __main__ - INFO - Tool retrieve routed to grade_documents based on config
+2025-06-21 16:55:30,887 - __main__ - INFO - Grading documents for relevance
+2025-06-21 16:55:30,889 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_grade.txt
+2025-06-21 16:55:46,730 - __main__ - INFO - Document relevance score: yes
+2025-06-21 16:55:46,732 - __main__ - INFO - Routing based on relevance_score: yes, rewrite_count: 0
+2025-06-21 16:55:46,734 - __main__ - INFO - Documents are relevant, proceeding to generate
+2025-06-21 16:55:49,842 - __main__ - INFO - Generating final response
+2025-06-21 16:55:53,070 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_generate.txt
+2025-06-21 16:57:52,223 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 16:58:52,233 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 17:09:33,123 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-06-21 17:09:33,138 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-06-21 17:09:38,940 - __main__ - INFO - Initialized ToolConfig with tools: {'multiply', 'retrieve'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-06-21 17:09:49,394 - __main__ - INFO - Database connection pool initialized
+2025-06-21 17:09:49,896 - __main__ - DEBUG - Database connection pool initialized
+2025-06-21 17:29:30,679 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-06-21 17:29:30,691 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-06-21 17:29:30,692 - __main__ - INFO - Initialized ToolConfig with tools: {'multiply', 'retrieve'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-06-21 17:29:30,699 - __main__ - INFO - Database connection pool initialized
+2025-06-21 17:29:30,703 - __main__ - DEBUG - Database connection pool initialized
+2025-06-21 17:29:30,706 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 17:29:30,856 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-06-21 17:29:31,809 - __main__ - INFO - Graph visualization saved as graph.png
+2025-06-21 17:29:36,407 - __main__ - INFO - Agent processing user query
+2025-06-21 17:30:58,828 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 17:31:03,267 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 17:32:03,283 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 17:35:08,756 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-06-21 17:35:08,765 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-06-21 17:35:08,767 - __main__ - INFO - Initialized ToolConfig with tools: {'multiply', 'retrieve'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-06-21 17:35:08,774 - __main__ - INFO - Database connection pool initialized
+2025-06-21 17:35:08,779 - __main__ - DEBUG - Database connection pool initialized
+2025-06-21 17:35:08,782 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 17:35:08,904 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-06-21 17:35:09,800 - __main__ - INFO - Graph visualization saved as graph.png
+2025-06-21 17:35:14,474 - __main__ - INFO - Agent processing user query
+2025-06-21 17:37:50,549 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-06-21 17:37:50,555 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-06-21 17:37:50,556 - __main__ - INFO - Initialized ToolConfig with tools: {'multiply', 'retrieve'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-06-21 17:37:50,563 - __main__ - INFO - Database connection pool initialized
+2025-06-21 17:37:50,566 - __main__ - DEBUG - Database connection pool initialized
+2025-06-21 17:37:50,575 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 17:37:50,737 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-06-21 17:37:52,647 - __main__ - INFO - Graph visualization saved as graph.png
+2025-06-21 17:38:11,537 - __main__ - INFO - Agent processing user query
+2025-06-21 17:42:17,817 - __main__ - DEBUG - Tool 'retrieve' routed to 'grade_documents' (retrieval tool)
+2025-06-21 17:42:17,824 - __main__ - DEBUG - Tool 'multiply' routed to 'generate' (non-retrieval tool)
+2025-06-21 17:42:17,825 - __main__ - INFO - Initialized ToolConfig with tools: {'multiply', 'retrieve'}, routing: {'retrieve': 'grade_documents', 'multiply': 'generate'}
+2025-06-21 17:42:17,831 - __main__ - INFO - Database connection pool initialized
+2025-06-21 17:42:17,834 - __main__ - DEBUG - Database connection pool initialized
+2025-06-21 17:42:17,838 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 17:42:17,988 - __main__ - INFO - Connection db_connection_pool status: OK, test connection successful
+2025-06-21 17:42:19,090 - __main__ - INFO - Graph visualization saved as graph.png
+2025-06-21 17:42:40,200 - __main__ - INFO - Agent processing user query
+2025-06-21 17:42:42,678 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 17:43:24,550 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 17:43:35,506 - __main__ - INFO - Agent processing user query
+2025-06-21 17:43:35,920 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 17:43:44,945 - __main__ - INFO - Agent processing user query
+2025-06-21 17:43:49,539 - __main__ - INFO - Using cached prompt template for e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_agent.txt
+2025-06-21 17:45:44,978 - __main__ - INFO - Calling tool: retrieve
+2025-06-21 17:45:56,411 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 17:46:24,475 - __main__ - INFO - Tool retrieve routed to grade_documents based on config
+2025-06-21 17:47:11,218 - __main__ - INFO - Grading documents for relevance
+2025-06-21 17:47:19,469 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_grade.txt
+2025-06-21 17:47:20,589 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 17:48:09,670 - __main__ - INFO - Document relevance score: yes
+2025-06-21 17:48:19,088 - __main__ - INFO - Routing based on relevance_score: yes, rewrite_count: 0
+2025-06-21 17:48:23,951 - __main__ - INFO - Documents are relevant, proceeding to generate
+2025-06-21 17:48:33,504 - __main__ - INFO - Generating final response
+2025-06-21 17:48:35,775 - __main__ - INFO - Loading and caching prompt template from e:\Code\GitProject\LangGraphChatBot\04_RagAgent\utils\../prompts/prompt_template_generate.txt
+2025-06-21 17:48:40,126 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use
+2025-06-21 17:49:44,411 - __main__ - INFO - Connection db_connection_pool status: 0/20 connections in use

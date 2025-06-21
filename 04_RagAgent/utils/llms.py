@@ -27,9 +27,9 @@ MODEL_CONFIGS = {
     },
     "qwen": {
         "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
-        "api_key": "sk-c45db4d2628e48cf232326e152c9a537f",
+        "api_key": "sk-8df139bd2a5845b0b2993cade7869495",  # sk-bd7996af59bd4e7b867a95ac0f46cc74
         "chat_model": "qwen-max",
-        "embedding_model": "text-embedding-v1"
+        "embedding_model": "text-embedding-v3"
     },
     "ollama": {
         "base_url": "http://localhost:11434/v1",
@@ -41,7 +41,7 @@ MODEL_CONFIGS = {
 
 
 # 默认配置
-DEFAULT_LLM_TYPE = "openai"
+DEFAULT_LLM_TYPE = "qwen"
 DEFAULT_TEMPERATURE = 0.7
 
 
@@ -88,7 +88,8 @@ def initialize_llm(llm_type: str = DEFAULT_LLM_TYPE) -> tuple[ChatOpenAI, OpenAI
             base_url=config["base_url"],
             api_key=config["api_key"],
             model=config["embedding_model"],
-            deployment=config["embedding_model"]
+            deployment=config["embedding_model"],
+            check_embedding_ctx_length = False,
         )
 
         logger.info(f"成功初始化 {llm_type} LLM")
@@ -125,10 +126,16 @@ def get_llm(llm_type: str = DEFAULT_LLM_TYPE) -> ChatOpenAI:
 if __name__ == "__main__":
     try:
         # 测试不同类型的LLM初始化
-        llm_openai = get_llm("openai")
-        llm_qwen = get_llm("qwen")
+        # llm_openai = get_llm("openai")
+        llm_chat, llm_embedding = get_llm("qwen")
+
+        response = llm_chat.invoke("你是谁？")
+        print(response)
+
+        embedding = llm_embedding.embed_query("这是一段示例文本")
+        print(f"嵌入向量长度: {len(embedding)}")
 
         # 测试无效类型
-        llm_invalid = get_llm("invalid_type")
+        # llm_invalid = get_llm("invalid_type")
     except LLMInitializationError as e:
         logger.error(f"程序终止: {str(e)}")

@@ -30,8 +30,8 @@ MODEL_CONFIGS = {
     },
     "qwen": {
         "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
-        "api_key": "sk-80a72f794bc4488d85798d590e96db43",
-        "chat_model": "qwen-max",
+        "api_key": "sk-bd7996af59bd4e7b867a95ac0f46cc74",
+        "chat_model": "deepseek-r1",
         "embedding_model": "text-embedding-v1"
     },
     "ollama": {
@@ -91,7 +91,8 @@ def initialize_llm(llm_type: str = DEFAULT_LLM_TYPE) -> tuple[ChatOpenAI, OpenAI
             base_url=config["base_url"],
             api_key=config["api_key"],
             model=config["embedding_model"],
-            deployment=config["embedding_model"]
+            deployment=config["embedding_model"],
+            check_embedding_ctx_length = False,
         )
 
         logger.info(f"成功初始化 {llm_type} LLM")
@@ -128,10 +129,10 @@ def get_llm(llm_type: str = DEFAULT_LLM_TYPE) -> ChatOpenAI:
 if __name__ == "__main__":
     try:
         # 测试不同类型的LLM初始化
-        llm_openai = get_llm("openai")
+        # llm_openai = get_llm("openai")
         llm_qwen = get_llm("qwen")
 
         # 测试无效类型
-        llm_invalid = get_llm("invalid_type")
+        # llm_invalid = get_llm("invalid_type")
     except LLMInitializationError as e:
         logger.error(f"程序终止: {str(e)}")

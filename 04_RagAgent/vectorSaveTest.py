@@ -5,8 +5,8 @@ import chromadb
 import uuid
 from utils import pdfSplitTest_Ch
 from utils import pdfSplitTest_En
-
-
+import os
+from utils.llms import MODEL_CONFIGS
 
 
 # 设置日志模版
@@ -15,29 +15,32 @@ logger = logging.getLogger(__name__)
 
 
 # GPT大模型 OpenAI相关配置
-OPENAI_API_BASE = "https://nangeai.top/v1"
-OPENAI_EMBEDDING_API_KEY = "sk-aR2Y17PuOKtS3455PbrKSKPswr047o6AMvCG6g3EfViPku"
-OPENAI_EMBEDDING_MODEL = "text-embedding-3-small"
+OPENAI_API_BASE = MODEL_CONFIGS["openai"]["base_url"]
+OPENAI_EMBEDDING_API_KEY = MODEL_CONFIGS["openai"]["api_key"]
+OPENAI_EMBEDDING_MODEL = MODEL_CONFIGS["openai"]["embedding_model"]
+
 # 国产大模型 OneAPI相关配置,通义千问为例
-ONEAPI_API_BASE = "http://139.224.72.218:3000/v1"
-ONEAPI_EMBEDDING_API_KEY = "sk-GseYmJ8pX1D4I32323506e8fDf514a51A3C4B714FfD45aD9"
-ONEAPI_EMBEDDING_MODEL = "text-embedding-v1"
+ONEAPI_API_BASE = MODEL_CONFIGS["oneapi"]["base_url"]
+ONEAPI_EMBEDDING_API_KEY = MODEL_CONFIGS["oneapi"]["api_key"]
+ONEAPI_EMBEDDING_MODEL = MODEL_CONFIGS["oneapi"]["embedding_model"]
+
 # 阿里通义千问大模型
-QWen_API_BASE = "https://dashscope.aliyuncs.com/compatible-mode/v1"
-QWen_EMBEDDING_API_KEY = "sk-c89db4d8628323232846e144c9a537f"
-QWen_EMBEDDING_MODEL = "text-embedding-v1"
+QWen_API_BASE = MODEL_CONFIGS["qwen"]["base_url"]
+QWen_EMBEDDING_API_KEY = MODEL_CONFIGS["qwen"]["api_key"]
+QWen_EMBEDDING_MODEL = MODEL_CONFIGS["qwen"]["embedding_model"]
+
 # 本地开源大模型 Ollama方式,nomic-embed-text为例
-OLLAMA_API_BASE = "http://localhost:11434/v1"
-OLLAMA_EMBEDDING_API_KEY = "ollama"
-OLLAMA_EMBEDDING_MODEL = "nomic-embed-text:latest"
+OLLAMA_API_BASE = MODEL_CONFIGS["ollama"]["base_url"]
+OLLAMA_EMBEDDING_API_KEY = MODEL_CONFIGS["ollama"]["api_key"]
+OLLAMA_EMBEDDING_MODEL = MODEL_CONFIGS["ollama"]
 
 
 # openai:调用gpt模型,oneapi:调用oneapi方案支持的模型,ollama:调用本地开源大模型,qwen:调用阿里通义千问大模型
-llmType = "openai"
+llmType = "qwen"
 
 # 设置测试文本类型 Chinese 或 English
 TEXT_LANGUAGE = 'Chinese'
-INPUT_PDF = "input/健康档案.pdf"
+INPUT_PDF = os.path.join(os.path.dirname(__file__), "input/健康档案.pdf")
 # TEXT_LANGUAGE = 'English'
 # INPUT_PDF = "input/DeepSeek_R1.pdf"
 
@@ -49,7 +52,7 @@ PAGE_NUMBERS=None
 CHROMADB_DIRECTORY = "chromaDB"  # chromaDB向量数据库的持久化路径
 CHROMADB_COLLECTION_NAME = "demo001"  # 待查询的chromaDB向量数据库的集合名称
 
-
+ 
 # get_embeddings方法计算向量
 def get_embeddings(texts):
     global llmType

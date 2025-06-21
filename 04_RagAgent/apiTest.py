@@ -17,7 +17,7 @@ headers = {"Content-Type": "application/json"}
 
 
 # 默认非流式输出 True or False
-stream_flag = True
+stream_flag = False
 
 
 input_text = "你好"

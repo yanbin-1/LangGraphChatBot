@@ -48,7 +48,7 @@ from utils.llms import get_llm
 from utils.tools_config import get_tools
 # 导入统一的 Config 类
 from utils.config import Config
-
+from langchain_core.output_parsers import JsonOutputParser
 
 # Author:@南哥AGI研习社 (B站 or YouTube 搜索“南哥AGI研习社”)
 
@@ -139,7 +139,7 @@ class ToolConfig:
     def get_tool_routing_config(self):
         # 直接返回 self.tool_routing_config，提供外部访问路由配置的接口
         return self.tool_routing_config
-
+# 固定大模型的回答，使其有binary_score字段
 class DocumentRelevanceScore(BaseModel):
     # 定义binary_score字段，表示相关性评分，取值为"yes"或"no"
     binary_score: str = Field(description="Relevance score 'yes' or 'no'")
@@ -345,12 +345,14 @@ def create_chain(llm_chat, template_file: str, structured_output=None):
                 if template_file not in create_chain.prompt_cache:
                     logger.info(f"Loading and caching prompt template from {template_file}")
                     # 从文件加载提示模板并存入缓存
-                    create_chain.prompt_cache[template_file] = PromptTemplate.from_file(template_file)
+                    create_chain.prompt_cache[template_file] = PromptTemplate.from_file(template_file, encoding="utf-8")
                 # 从缓存中获取提示模板
                 prompt_template = create_chain.prompt_cache[template_file]
 
         # 创建聊天提示模板，使用模板内容
         prompt = ChatPromptTemplate.from_messages([("human", prompt_template.template)])
+        parser = JsonOutputParser()
+
         # 返回提示模板与LLM的组合链，若有结构化输出则绑定
         return prompt | (llm_chat.with_structured_output(structured_output) if structured_output else llm_chat)
     except FileNotFoundError:
@@ -766,7 +768,7 @@ def create_graph(db_connection_pool: ConnectionPool, llm_chat, llm_embedding, to
 
     # 添加从起始到代理的边
     workflow.add_edge(START, end_key="agent")
-    # 添加代理的条件边，根据工具调用的工具名称决定下一步路由
+    # 添加代理的条件边，根据工具调用的工具名称决定下一步路由。tools_condition是langchain自带的决定Agent是否需要调用工具
     workflow.add_conditional_edges(source="agent", path=tools_condition, path_map={"tools": "call_tools", END: END})
     # 添加检索的条件边，根据工具调用的结果动态决定下一步路由
     workflow.add_conditional_edges(source="call_tools", path=lambda state: route_after_tools(state, tool_config),path_map={"generate": "generate", "grade_documents": "grade_documents"})

@@ -12,7 +12,7 @@ from psycopg_pool import ConnectionPool
 
 
 # openai:调用gpt模型,oneapi:调用oneapi方案支持的模型,ollama:调用本地开源大模型,qwen:调用阿里通义千问大模型
-llm_type = "openai"
+llm_type = "qwen"
 connection_pool = None
 
 
@@ -43,26 +43,29 @@ def create_graph(llm_type: str, pool) -> StateGraph:
 
         # 定义chatbot的node
         def chatbot(state: MessagesState, config: RunnableConfig, *, store: BaseStore):
-            # 1、长期记忆逻辑
-            # 设置命名空间 namespace
-            namespace = ("memories", config["configurable"]["user_id"])
-            # 获取state中最新一条消息(用户问题)进行检索
-            memories = store.search(namespace, query=str(state["messages"][-1].content))
-            info = "\n".join([d.value["data"] for d in memories])
-            # 将检索到的知识拼接到系统prompt
-            system_msg = f"You are a helpful assistant talking to the user. User info: {info}"
-            # 获取state中的消息进行消息过滤后存储新的记忆
-            last_message = state["messages"][-1]
-            if "记住" in last_message.content.lower():
-                memory = "我的频道是南哥AGI研习社。"
-                store.put(namespace, str(uuid.uuid4()), {"data": memory})
-            # 2、短期记忆逻辑 进行消息过滤
-            messages = filter_messages(state["messages"])
-            # 3、调用LLM
-            response = llm.invoke(
-                [{"role": "system", "content": system_msg}] + messages
-            )
-            return {"messages": [response]}
+            try:
+                # 1、长期记忆逻辑
+                # 设置命名空间 namespace
+                namespace = ("memories", config["configurable"]["user_id"])
+                # 获取state中最新一条消息(用户问题)进行检索
+                memories = store.search(namespace, query=str(state["messages"][-1].content))
+                info = "\n".join([d.value["data"] for d in memories])
+                # 将检索到的知识拼接到系统prompt
+                system_msg = f"You are a helpful assistant talking to the user. User info: {info}"
+                # 获取state中的消息进行消息过滤后存储新的记忆
+                last_message = state["messages"][-1]
+                if "记住" in last_message.content.lower():
+                    memory = "我的频道是南哥AGI研习社。"
+                    store.put(namespace, str(uuid.uuid4()), {"data": memory})
+                # 2、短期记忆逻辑 进行消息过滤
+                messages = filter_messages(state["messages"])
+                # 3、调用LLM
+                response = llm.invoke(
+                    [{"role": "system", "content": system_msg}] + messages
+                )
+                return {"messages": [response]}
+            except Exception as e:
+                print(f"Invalid input format: {e}")
 
         # 配置graph
         graph_builder.add_node("chatbot", chatbot)
@@ -124,10 +127,10 @@ def main():
         sys.exit(1)
 
     # 测试1
-    # config = {"configurable": {"thread_id": "1", "user_id": "1"}}
-    # input_message = {"role": "user", "content": "记住：我的频道是南哥AGI研习社"}
-    # for chunk in graph.stream({"messages": [input_message]}, config, stream_mode="values"):
-    #     chunk["messages"][-1].pretty_print()
+    config = {"configurable": {"thread_id": "1", "user_id": "1"}}
+    input_message = {"role": "user", "content": "记住：我的频道是南哥AGI研习社"}
+    for chunk in graph.stream({"messages": [input_message]}, config, stream_mode="values"):
+        chunk["messages"][-1].pretty_print()
 
     config = {"configurable": {"thread_id": "1", "user_id": "1"}}
     input_message = {"role": "user", "content": "我的频道是什么?"}

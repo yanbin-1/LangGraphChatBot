@@ -45,8 +45,8 @@ from demoRagAgent import (
 
 
 # 设置LangSmith环境变量 进行应用跟踪，实时了解应用中的每一步发生了什么
-# os.environ["LANGCHAIN_TRACING_V2"] = "true"
-# os.environ["LANGCHAIN_API_KEY"] = "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"
+os.environ["LANGCHAIN_TRACING_V2"] = "true"
+os.environ["LANGCHAIN_API_KEY"] = "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"
 
 
 # # 设置日志基本配置，级别为DEBUG或INFO

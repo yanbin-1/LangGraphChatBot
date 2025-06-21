@@ -26,7 +26,7 @@ MODEL_CONFIGS = {
     },
     "qwen": {
         "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
-        "api_key": "sk-1c87f1d7b59346cca9e8cc7f97ee57f5",
+        "api_key": "sk-bd7996af59bd4e7b867a95ac0f46cc74",
         "model": "deepseek-r1"  # deepseek-r1-distill-llama-70b
     },
     "ollama": {
